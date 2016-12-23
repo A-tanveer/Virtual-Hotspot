@@ -144,7 +144,7 @@ class Ui_MainWindow(object):
         self.checkBox_2.setText(_translate("MainWindow", "Show Password"))
 
         self.label_share.setText(_translate("MainWindow", "<html><head/><body><p>"
-                                                          "<a href=\"https://www.google.com\"><span style=\""
+                                                          "<a href=\"shareIntarnet.html\"><span style=\""
                                                           " font-size:8pt; font-style:italic; text-decoration: "
                                                           "underline; color:#fc5400;\">Share Internet</span>"
                                                           "</a></p></body></html>"))
