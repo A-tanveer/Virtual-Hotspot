@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Share Internet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/logo.png" alt="logo" class="header_img">
+    </header>
+
+
+    <div class="break ">
+    </div>
+
+
+    <div class="Share ">
+
+        <h1 class="h">Share Internet Through Hotspot</h1>
+
+        <p class="p ">
+            1. Strat Hotspot with your desired name and password from the application<br>
+            <br> 2. Go to "Control Panel\Network and Internet\Network and Sharing Center ". You'll see a new Network has been created with your given name. Now click on the connection that you want to share with it. In my case it was Ethernet 2.<br>
+            <br> 3. Remember the connection of your hotspots connection name.
+        </p>
+
+        <img src="img/share1.PNG" alt="" class="i ">
+
+        <p class="p ">
+            4. Go to "Properties> Sharing". Now select "Alolw other network users to connect through this computer's Internet connection" and from the dropdown select your hotspots connection name. In my case it was "Local Area Connection* 4".
+        </p>
+
+        <img src="img/share2.PNG" alt="" class="i">
+
+        <p class="p">
+            5. Apply settings and enjoy sharing your Internet.
+        </p>
+
+    </div>
+
+
+    <div class="connect ">
+
+        <h1 class="h">Device stuck at connecting</h1>
+
+        <p class="p">
+            The following procedure works for this issue.<br>
+            <br>1. Disable your Internet Sharing and enable it again. See left side for instruction.
+            <br><br>2. Disconnect from Internet and after a while connect again.
+            <br> For the most cases this would solve the problem but if it doesn't continue following instructions
+            <br><br>3. open 'services.msc' from stat > run > services.msc.
+        </p>
+
+        <img src="img/conn1.png" alt="" class="i">
+
+        <p class="p">
+            Restart "Internet Connection Sharing (ICS)" service from the "services.msc" window.
+        </p>
+
+        <img src="img/conn2.png" alt="" class="i">
+
+        <p class="p">
+            4. Open Hotspot application window and stop the hotspot and after a while stat it back.<br>
+            <br>5. Internet sharing is now enabled and everything gets resolved.
+        </p>
+
+    </div>
+
+</body>
+<footer class="foo">
+    <p><br>Enjoy sharing Internet.</p>
+</footer>
+
+</html>
