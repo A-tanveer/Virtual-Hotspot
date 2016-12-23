@@ -13,6 +13,7 @@ import time
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 import HostedNetwork as hn
+import CreateClientsGui
 
 s = sched.scheduler(time.time, time.sleep)
 
@@ -235,6 +236,7 @@ class Ui_MainWindow(object):
 
     def update_ui(self):
         _translate = QtCore.QCoreApplication.translate
+        CreateClientsGui.create_gui()
         self.set_button_name()
         self.lineEdit_pass.setText(_translate("MainWindow", hn.get_password()))
         self.lineEdit_ssid.setText(_translate("MainWindow", hn.get_name()))
