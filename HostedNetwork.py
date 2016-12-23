@@ -1,11 +1,12 @@
 import os
 import time
+import socket
 
 
 # create or change hosted network
 def hosted_network_create(ssid, key):
     command = "netsh wlan set hostednetwork mode=allow ssid=\"" + ssid + "\" key=\"" + key + "\""
-    print(command)
+    # print(command)
     os.system(command)
     # time.sleep(0.25)
 
@@ -121,16 +122,23 @@ def get_ip_mac():
     f = open('temp.mac.ip', 'w')
     command = "arp -a | findstr /r \"192\.168\.[0-9]*\.[2-9][^0-9] 192\.168\.[0-9]*\.[0-9][0-9][^0-9] " \
               "192\.168\.[0-9]*\.[0-1][0-9][0-9]\""
+    # print(command)
     out = os.popen(command).read()
     f.write(out)
     f.close()
     f = open('temp.mac.ip', 'r')
     data = f.readlines()
     clients = []
+
     for line in data:
+
         this_user = []
         each_line = line.split()
+
         this_user.append(each_line[0])
         this_user.append(each_line[1])
+
+        this_user.append(socket.gethostbyaddr(each_line[0])[0])
         clients.append(this_user)
+
     return clients
