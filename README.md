@@ -19,7 +19,10 @@
 
 # Platform:
 
-This application is for windows users only. But clients can be of any platforms.
+This application is currenty for windows users only. But clients can be of any platforms.
+
+
+*Comming soon for linux users
 
 
 
