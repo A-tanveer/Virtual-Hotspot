@@ -1,5 +1,5 @@
 # Virtual-Hotspot
-  - Academic work, please do not copy
+  - licensed under the GNU General Public License version 3
 
 
 create and maintain a virtual hotspot from your windows notebook.
