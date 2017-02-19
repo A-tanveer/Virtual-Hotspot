@@ -137,8 +137,11 @@ def get_ip_mac():
 
         this_user.append(each_line[0])
         this_user.append(each_line[1])
-
-        this_user.append(socket.gethostbyaddr(each_line[0])[0])
+        
+        try:
+            this_user.append(socket.gethostbyaddr(each_line[0])[0])
+        except socket.gaierror:
+            print("ignoring failed address lookup")
         clients.append(this_user)
 
     return clients

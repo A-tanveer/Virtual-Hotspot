@@ -51,7 +51,7 @@ class Ui_MainWindow(object):
         self.checkBox_2.stateChanged.connect(self.changeTextEdit)
 
         self.label_share = QtWidgets.QLabel(self.centralwidget)
-        self.label_share.setGeometry(QtCore.QRect(230, 410, 81, 20))
+        self.label_share.setGeometry(QtCore.QRect(270, 410, 81, 20))
         self.label_share.setOpenExternalLinks(True)
         self.label_share.setObjectName("label_share")
 
@@ -136,7 +136,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Tanveer's wifi Hotspot"))
-        MainWindow.setWindowIcon(QtGui.QIcon('logo.png'))
+
+        MainWindow.setWindowIcon(QtGui.QIcon('img/logo.png'))
 
         self.lineEdit_pass.setText(_translate("MainWindow", hn.get_password()))
         self.lineEdit_ssid.setText(_translate("MainWindow", hn.get_name()))
@@ -146,7 +147,7 @@ class Ui_MainWindow(object):
         self.label_share.setText(_translate("MainWindow", "<html><head/><body><p>"
                                                           "<a href=\"shareIntarnet.html\"><span style=\""
                                                           " font-size:8pt; font-style:italic; text-decoration: "
-                                                          "underline; color:#fc5400;\">Share Internet</span>"
+                                                          "underline; color:#fc5400;\">Help?</span>"
                                                           "</a></p></body></html>"))
 
         self.set_button_name()
@@ -227,7 +228,7 @@ class Ui_MainWindow(object):
             hn.hosted_network_stop()
             self.update_ui()
         else:
-            if len(passwd) < 8 or ' ' in passwd or ssid.startswith(' ') or ssid.startswith('"'):
+            if len(passwd) < 8 or ' ' in passwd or ssid.startswith(' ') or ssid.startswith('"') or len(ssid) < 1:
                 self.show_dialog()
             else:
                 hn.hosted_network_create(ssid, passwd)
