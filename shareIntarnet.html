@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
     <title>Share Internet</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+
+
 
 <body>
     <header class="header">
@@ -23,15 +29,16 @@
         <h1 class="h">Share Internet Through Hotspot</h1>
 
         <p class="p ">
-            1. Strat Hotspot with your desired name and password from the application<br>
-            <br> 2. Go to "Control Panel\Network and Internet\Network and Sharing Center ". You'll see a new Network has been created with your given name. Now click on the connection that you want to share with it. In my case it was Ethernet 2.<br>
-            <br> 3. Remember the connection of your hotspots connection name.
+            1. Start Hotspot with your desired name and password from the application.<br>
+            <br> 2. Go to "Control Panel\Network and Internet\Network and Sharing Center ". You'll see a new Network has been created with your given name. Now click on the connection that you want to share with it. In my case it was "Ethernet 2".<br>
+            <br> 3. Remember hotspots connection name, it will be needed later. in my case it was "Local Area Connection* 4".
         </p>
 
         <img src="img/share1.PNG" alt="" class="i ">
 
         <p class="p ">
-            4. Go to "Properties> Sharing". Now select "Alolw other network users to connect through this computer's Internet connection" and from the dropdown select your hotspots connection name. In my case it was "Local Area Connection* 4".
+            4. Click Ethernet 2. Go to "Properties> Sharing". Now select "Alolw other network users to connect through this computer's Internet connection" (deselect if you want to stop sharing) and from the dropdown select your hotspots connection name. In my case
+            it was "Local Area Connection* 4".
         </p>
 
         <img src="img/share2.PNG" alt="" class="i">
@@ -49,10 +56,10 @@
 
         <p class="p">
             The following procedure works for this issue.<br>
-            <br>1. Disable your Internet Sharing and enable it again. See left side for instruction.
+            <br>1. Disable your Internet Sharing and enable it again. See Steps 3, 4, 5 from left side of this page.
             <br><br>2. Disconnect from Internet and after a while connect again.
-            <br> For the most cases this would solve the problem but if it doesn't continue following instructions
-            <br><br>3. open 'services.msc' from stat > run > services.msc.
+            <br> For the most cases this would solve the problem but if it doesn't continue following instructions.
+            <br><br>3. open 'services.msc' from start > run > services.msc.
         </p>
 
         <img src="img/conn1.png" alt="" class="i">
@@ -64,7 +71,7 @@
         <img src="img/conn2.png" alt="" class="i">
 
         <p class="p">
-            4. Open Hotspot application window and stop the hotspot and after a while stat it back.<br>
+            4. Open Hotspot application window and stop the hotspot and after a while start it back.<br>
             <br>5. Internet sharing is now enabled and everything gets resolved.
         </p>
 
